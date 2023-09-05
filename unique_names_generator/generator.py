@@ -1,14 +1,15 @@
 import random
 from typing import List
 
-from unique_names_generator.data import LEX_ADJETIVOS, LEX_SUBSTANTIVOS, LEX_VERBOS, STAR_WARS
+from unique_names_generator.data import ADJECTIVES, LATIN, LEX_ADJETIVOS, LEX_SUBSTANTIVOS, LEX_VERBOS, STAR_WARS
 
 combo1 = [STAR_WARS, LEX_ADJETIVOS]
 combo2 = [STAR_WARS, LEX_VERBOS, LEX_SUBSTANTIVOS]
+combo3 = [LATIN, ADJECTIVES, LEX_SUBSTANTIVOS]
 
 
 def get_random_name(
-    combos: List[List[str]] = [combo1, combo2],
+    combos: List[List[str]] = [combo1, combo2, combo3],
     separator: str = "_",
     style: str = "lowercase",
 ):
