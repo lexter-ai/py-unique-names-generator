@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
 
 env:
   AWS_DEFAULT_REGION: us-east-1
@@ -15,7 +15,7 @@ jobs:
       - run: pipx install poetry
       - uses: actions/setup-python@v4
         with:
-          python-version: "3.8"
+          python-version: "3.10"
           cache: "poetry"
       - run: poetry install --only dev
       - run: make black
@@ -31,7 +31,7 @@ jobs:
       - run: pipx install poetry
       - uses: actions/setup-python@v4
         with:
-          python-version: "3.8"
+          python-version: "3.10"
           cache: "poetry"
       - run: poetry install
       - run: make unit
