@@ -1,4 +1,5 @@
-# py-unique-names-generator
+# Unique Names Generator (version: v0.0.1)
+
 Generate unique and memorable name strings
 
 
