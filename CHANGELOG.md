@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2023-09-05)
+
+### Feature
+
+* Combo 3 ([`9aa151b`](https://github.com/lexter-ai/py-unique-names-generator/commit/9aa151b65180dd9327ab4fb78221a86a504a2ddc))
+
 ## v0.1.0 (2023-09-05)
 
 ### Feature
