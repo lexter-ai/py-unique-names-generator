@@ -1,4 +1,4 @@
-from .generator import get_random_name
+from unique_names_generator.generator import get_random_name
 
 __all__ = [get_random_name]
 
