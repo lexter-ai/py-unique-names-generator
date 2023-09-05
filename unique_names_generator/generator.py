@@ -27,4 +27,4 @@ def get_random_name(
         if style == "uppercase":
             part_name = part_name.upper()
         random_name.append(part_name)
-    return  separator.join(random_name)
+    return separator.join(random_name)
