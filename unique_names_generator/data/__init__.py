@@ -8,6 +8,7 @@ from unique_names_generator.data.lex_substantivos import LEX_SUBSTANTIVOS
 from unique_names_generator.data.lex_verbos import LEX_VERBOS
 from unique_names_generator.data.names import NAMES
 from unique_names_generator.data.star_wars import STAR_WARS
+from unique_names_generator.data.latin import LATIN
 
 __all__ = [
     ADJECTIVES,
@@ -20,4 +21,5 @@ __all__ = [
     LEX_VERBOS,
     NAMES,
     STAR_WARS,
+    LATIN,
 ]
