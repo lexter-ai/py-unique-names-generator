@@ -1,0 +1,24 @@
+# Run Linter
+
+name: Lint code base
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pipx install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+          cache: "poetry"
+      - run: poetry install --only dev
+      - run: make black
+      - run: make sort
+      - run: make pre-commit
+      - run: make complex
+      - run: make lint

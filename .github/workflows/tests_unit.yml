@@ -1,0 +1,24 @@
+# Run the simplest test versions on every push
+
+name: Unit testing
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+    branches: [master]
+
+env:
+  AWS_DEFAULT_REGION: us-east-1
+
+jobs:
+  unitTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pipx install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+          cache: "poetry"
+      - run: poetry install
+      - run: make unit

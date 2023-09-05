@@ -1,5 +1,5 @@
 [flake8]
-ignore = E203, E266, E501, W503
-max-line-length = 100
-max-complexity = 18
-select = B,C,E,F,W,T4,B9
+exclude = .eggs, setup.py, example, .cdk,out, .git, dist, *.md, *.yaml, *.txt, *.ini
+ignore = E203, E266, W503, BLK100, W291, I004, E501, E712
+max-line-length = 150
+max-complexity = 15

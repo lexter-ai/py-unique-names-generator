@@ -1,12 +1,9 @@
 import random
 
-from .data import ANIMALS
-from .data import COLORS
+from .data import ANIMALS, COLORS
 
 
-def get_random_name(
-    combo=[COLORS, ANIMALS], separator: str = " ", style: str = "capital"
-):
+def get_random_name(combo=[COLORS, ANIMALS], separator: str = " ", style: str = "capital"):
     if not combo:
         raise Exception("combo cannot be empty")
 
