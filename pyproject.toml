@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "unique-names-generator"
-version = "0.2.0"
+version = "0.3.0"
 description = ""
 authors = ["Lucas Kawazoi <lucas@lexter.ai>"]
 readme = "README.md"
