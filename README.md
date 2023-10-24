@@ -1,4 +1,4 @@
-# Unique Names Generator (version: v0.3.0)
+# Unique Names Generator (version: v0.4.0)
 
 Generate unique and memorable name strings
 
