@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-10-11)
+
+### Feature
+
+* Ran poetry update ([`64fe874`](https://github.com/lexter-ai/py-unique-names-generator/commit/64fe87457038fdf14e92efc5def84e20c75080b4))
+
 ## v0.2.0 (2023-09-05)
 
 ### Feature
