@@ -1,4 +1,4 @@
-.PHONY: get_session_token dev lint coverage pre-commit sort deploy destroy deps unit infra integration e2e pipeline-tests docs build
+.PHONY: dev lint coverage pre-commit sort deploy destroy deps unit infra integration e2e pipeline-tests docs build
 
 dev:
 	pip install --upgrade pip pre-commit poetry
@@ -48,15 +48,3 @@ jupyter:
 	LOG_FORMAT=notebook jupyter notebook
 
 pr: format unit
-
-
-get_session_token:
-	aws_sts_output=$$(aws sts get-session-token \
-		--serial-number arn:aws:iam::216495393214:${mfa_profile}/${1} \
-		--token-code ${2}); \
-	aws_access_key_id_new=$$(echo $$aws_sts_output | jq -r '.Credentials.AccessKeyId'); \
-	aws_secret_access_key_new=$$(echo $$aws_sts_output | jq -r '.Credentials.SecretAccessKey'); \
-	aws_session_token_new=$$(echo $$aws_sts_output | jq -r '.Credentials.SessionToken'); \
-	aws configure set aws_access_key_id $$aws_access_key_id_new --profile $(mfa_profile); \
-	aws configure set aws_secret_access_key $$aws_secret_access_key_new --profile $(mfa_profile); \
-	aws configure set aws_session_token $$aws_session_token_new --profile $(mfa_profile)
